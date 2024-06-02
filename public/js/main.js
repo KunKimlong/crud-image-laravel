@@ -1,17 +1,12 @@
 (function ($) {
     "use strict";
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    
+    $('body').on("click","#btn-delete",function(){
+        var id = $(this).attr('remove');
+        $('#remove_id').val(id);
+    });
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -112,7 +107,7 @@
             responsive: true
         }
     });
-    
+
 
 
     // Single Line Chart
@@ -202,6 +197,6 @@
         }
     });
 
-    
+
 })(jQuery);
 
